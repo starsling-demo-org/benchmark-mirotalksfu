@@ -1,0 +1,18 @@
+{
+  "cacheEvents": [
+    {
+      "cacheKey": "buildkit-gha",
+      "requestedRestoreKeys": [],
+      "matchedKey": "gha:17715964034797521337",
+      "hitKind": "exact",
+      "sourceRef": "refs/heads/main",
+      "buildkit": {
+        "done": 35,
+        "cached": 7,
+        "error": 0,
+        "imported": true,
+        "exported": true
+      }
+    }
+  ]
+}

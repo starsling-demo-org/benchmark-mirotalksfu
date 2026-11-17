@@ -1,0 +1,1653 @@
+{
+  "schemaVersion": 1,
+  "manifest": {
+    "schemaVersion": 1,
+    "experimentId": "diag-1",
+    "inputFingerprint": "dfd9c8970dac49703abcb90ac39f41ef4678db7a65a95d62d257e34972bf5d49",
+    "samples": [
+      {
+        "sampleId": "diag-1-main-push-cold-rep1-github-baseline",
+        "scenarioName": "main-push",
+        "profileName": "cold",
+        "variant": "github-baseline",
+        "repetition": 1
+      },
+      {
+        "sampleId": "diag-1-main-push-cold-rep1-starsling-baseline",
+        "scenarioName": "main-push",
+        "profileName": "cold",
+        "variant": "starsling-baseline",
+        "repetition": 1
+      }
+    ]
+  },
+  "config": {
+    "schemaVersion": 1,
+    "upstream": {
+      "repository": "miroslavpejic85/mirotalksfu",
+      "commitSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "defaultBranch": "main"
+    },
+    "benchmarkRepository": {
+      "repository": "starsling-demo-org/benchmark-mirotalksfu",
+      "controlBranch": "bench/control",
+      "defaultBranch": "showcase",
+      "replayBranch": "main"
+    },
+    "scenarios": {
+      "main-push": {
+        "name": "main-push",
+        "description": "Merge of e76e48f678f2 to main",
+        "event": "push",
+        "main": {
+          "branch": "main",
+          "beforeSha": "46231380d204cdbedad665608006cad9042a58f0",
+          "afterSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+          "changedPaths": [
+            ".env.template",
+            "app/src/Server.js",
+            "app/src/config.template.js",
+            "package-lock.json",
+            "package.json",
+            "public/css/VideoGrid.css",
+            "public/js/Brand.js",
+            "public/js/Room.js",
+            "public/js/RoomClient.js",
+            "public/js/ScreenCameraLayout.js",
+            "public/js/ScreenTouchZoom.js",
+            "public/js/VideoGrid.js",
+            "public/lang/ar.json",
+            "public/lang/bn.json",
+            "public/lang/de.json",
+            "public/lang/en.json",
+            "public/lang/es.json",
+            "public/lang/fa.json",
+            "public/lang/fr.json",
+            "public/lang/hi.json",
+            "public/lang/hu.json",
+            "public/lang/id.json",
+            "public/lang/it.json",
+            "public/lang/ja.json",
+            "public/lang/ko.json",
+            "public/lang/mr.json",
+            "public/lang/nl.json",
+            "public/lang/pl.json",
+            "public/lang/pt.json",
+            "public/lang/ru.json",
+            "public/lang/sr.json",
+            "public/lang/sw.json",
+            "public/lang/ta.json",
+            "public/lang/te.json",
+            "public/lang/th.json",
+            "public/lang/tr.json",
+            "public/lang/uk.json",
+            "public/lang/ur.json",
+            "public/lang/vi.json",
+            "public/lang/zh.json",
+            "public/views/Room.html",
+            "tests/test-ScreenCameraLayout.js",
+            "tests/test-ScreenTouchZoom.js"
+          ]
+        },
+        "referenceRuns": [
+          {
+            "workflowPath": ".github/workflows/ci.yml",
+            "runId": 42260522986,
+            "attempt": 1,
+            "htmlUrl": "https://github.com/miroslavpejic85/mirotalksfu/actions/runs/42260522986"
+          }
+        ]
+      },
+      "seed-parent": {
+        "name": "seed-parent",
+        "role": "seed",
+        "description": "Warm seed: the previous push (46231380d204 onto ff41c0d62bd9)",
+        "event": "push",
+        "main": {
+          "branch": "main",
+          "beforeSha": "ff41c0d62bd9e7518a2d9b20f7b223b17ae29923",
+          "afterSha": "46231380d204cdbedad665608006cad9042a58f0",
+          "changedPaths": [
+            ".env.template",
+            "app/src/Server.js",
+            "app/src/config.template.js",
+            "package-lock.json",
+            "package.json",
+            "public/js/AppSwitcher.js",
+            "public/js/Brand.js",
+            "public/js/Room.js",
+            "public/js/RoomClient.js",
+            "public/lang/ar.json",
+            "public/lang/bn.json",
+            "public/lang/de.json",
+            "public/lang/en.json",
+            "public/lang/es.json",
+            "public/lang/fa.json",
+            "public/lang/fr.json",
+            "public/lang/hi.json",
+            "public/lang/hu.json",
+            "public/lang/id.json",
+            "public/lang/it.json",
+            "public/lang/ja.json",
+            "public/lang/ko.json",
+            "public/lang/mr.json",
+            "public/lang/nl.json",
+            "public/lang/pl.json",
+            "public/lang/pt.json",
+            "public/lang/ru.json",
+            "public/lang/sr.json",
+            "public/lang/sw.json",
+            "public/lang/ta.json",
+            "public/lang/te.json",
+            "public/lang/th.json",
+            "public/lang/tr.json",
+            "public/lang/uk.json",
+            "public/lang/ur.json",
+            "public/lang/vi.json",
+            "public/lang/zh.json",
+            "public/views/landing.html",
+            "tests/test-AppSwitcher.js"
+          ]
+        },
+        "referenceRuns": []
+      }
+    },
+    "patches": [],
+    "runnerMapping": {
+      "defaultMap": {
+        "ubuntu-latest": {
+          "github": "TODO-github-larger-runner-for-ubuntu-latest",
+          "starsling": "starsling-ubuntu-24.04"
+        },
+        "ubuntu-24.04": {
+          "github": "TODO-github-larger-runner-for-ubuntu-24.04",
+          "starsling": "starsling-ubuntu-24.04"
+        },
+        "ubuntu-26.04": {
+          "github": "TODO-github-larger-runner-for-ubuntu-26.04",
+          "starsling": "starsling-ubuntu-26.04"
+        },
+        "ubuntu-slim": {
+          "github": "TODO-github-larger-runner-for-ubuntu-slim",
+          "starsling": "starsling-ubuntu-24.04-2"
+        },
+        "ubuntu-22.04": {
+          "github": "ubuntu-22.04-4core",
+          "starsling": "starsling-ubuntu-24.04"
+        }
+      },
+      "runnerSpecs": {
+        "ubuntu-latest": {
+          "label": "ubuntu-latest",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        },
+        "ubuntu-24.04": {
+          "label": "ubuntu-24.04",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        },
+        "ubuntu-26.04": {
+          "label": "ubuntu-26.04",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        },
+        "ubuntu-slim": {
+          "label": "ubuntu-slim",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 1,
+          "ramGiB": 5,
+          "billingPerMinuteUsd": 0.004
+        },
+        "starsling-ubuntu-24.04-2": {
+          "label": "starsling-ubuntu-24.04-2",
+          "provider": "starsling",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 2,
+          "ramGiB": 8,
+          "billingPerMinuteUsd": 0.004
+        },
+        "starsling-ubuntu-24.04": {
+          "label": "starsling-ubuntu-24.04",
+          "provider": "starsling",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.008
+        },
+        "starsling-ubuntu-26.04": {
+          "label": "starsling-ubuntu-26.04",
+          "provider": "starsling",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.008
+        },
+        "macos-latest": {
+          "label": "macos-latest",
+          "provider": "github",
+          "os": "macos",
+          "arch": "arm64",
+          "vcpu": 3,
+          "ramGiB": 7,
+          "billingPerMinuteUsd": 0.08
+        },
+        "windows-latest": {
+          "label": "windows-latest",
+          "provider": "github",
+          "os": "windows",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.032
+        },
+        "TODO-github-larger-runner-for-ubuntu-latest": {
+          "label": "TODO-github-larger-runner-for-ubuntu-latest",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        },
+        "TODO-github-larger-runner-for-ubuntu-24.04": {
+          "label": "TODO-github-larger-runner-for-ubuntu-24.04",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        },
+        "TODO-github-larger-runner-for-ubuntu-26.04": {
+          "label": "TODO-github-larger-runner-for-ubuntu-26.04",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        },
+        "TODO-github-larger-runner-for-ubuntu-slim": {
+          "label": "TODO-github-larger-runner-for-ubuntu-slim",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 1,
+          "ramGiB": 5,
+          "billingPerMinuteUsd": 0.004
+        },
+        "ubuntu-22.04-4core": {
+          "label": "ubuntu-22.04-4core",
+          "provider": "github",
+          "os": "linux",
+          "arch": "x64",
+          "vcpu": 4,
+          "ramGiB": 16,
+          "billingPerMinuteUsd": 0.016
+        }
+      }
+    },
+    "profiles": {
+      "cold": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "warm": {
+        "name": "warm",
+        "actionsCache": "warm",
+        "crossRunArtifacts": "seeded",
+        "seedScenario": "seed-parent",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": true,
+        "amortizationHorizonRuns": 10
+      }
+    },
+    "adaptations": [
+      {
+        "id": "no-registry-login",
+        "kind": "workflow-setting",
+        "workflowFile": ".github/workflows/ci.yml",
+        "jobId": "build",
+        "fromPattern": "",
+        "toReplacement": "",
+        "expectedMatches": 0,
+        "setPath": [
+          "steps",
+          "2",
+          "if"
+        ],
+        "setValue": false,
+        "reason": "ci.yml job build: docker/login-action has no if: and no Docker Hub secrets exist here; the login only serves the push. Off in every configuration (kit.md design item 1; the setup commit makes the same edit on starsling/develop) (step index +1: instrumentation inserts the harness step at index 0 before adaptations apply)",
+        "blocksFullParity": true
+      },
+      {
+        "id": "no-image-push",
+        "kind": "workflow-setting",
+        "workflowFile": ".github/workflows/ci.yml",
+        "jobId": "build",
+        "fromPattern": "",
+        "toReplacement": "",
+        "expectedMatches": 0,
+        "setPath": [
+          "steps",
+          "5",
+          "with",
+          "push"
+        ],
+        "setValue": false,
+        "reason": "ci.yml job build: push: true would publish mirotalk/sfu:latest; set to false in every configuration, the two-platform build still runs (kit.md design item 2) (step index +1: instrumentation inserts the harness step at index 0 before adaptations apply)",
+        "blocksFullParity": true
+      },
+      {
+        "id": "secret-gate-dockerhub-username",
+        "kind": "secret-gate-annotation",
+        "workflowFile": ".github/workflows/ci.yml",
+        "jobId": "build",
+        "fromPattern": "${{ secrets.DOCKERHUB_USERNAME }}",
+        "toReplacement": "",
+        "expectedMatches": 1,
+        "reason": "DOCKERHUB_USERNAME does not exist in the benchmark org; only the login step reads it, and no-registry-login turns that step off. The reference is removed so no configuration reads it.",
+        "blocksFullParity": false
+      },
+      {
+        "id": "secret-gate-dockerhub-access-token",
+        "kind": "secret-gate-annotation",
+        "workflowFile": ".github/workflows/ci.yml",
+        "jobId": "build",
+        "fromPattern": "${{ secrets.DOCKERHUB_ACCESS_TOKEN }}",
+        "toReplacement": "",
+        "expectedMatches": 1,
+        "reason": "DOCKERHUB_ACCESS_TOKEN does not exist in the benchmark org; only the login step reads it, and no-registry-login turns that step off. The reference is removed so no configuration reads it.",
+        "blocksFullParity": false
+      }
+    ],
+    "collectors": [],
+    "execution": {
+      "repetitions": 5,
+      "timeoutMinutes": 150,
+      "maxConcurrentExperiments": 1,
+      "pollIntervalSeconds": 15,
+      "apiBudgetPerHour": 252,
+      "maxJobQueueSeconds": 30,
+      "publicRepoGitHubFree": true,
+      "commitIdentity": {
+        "name": "starsling-dev",
+        "email": "290538643+starsling-dev@users.noreply.github.com"
+      }
+    },
+    "instrumentation": true
+  },
+  "samples": [
+    {
+      "sampleId": "diag-1-main-push-cold-rep1-github-baseline",
+      "repetition": 1,
+      "scenarioName": "main-push",
+      "variant": "github-baseline",
+      "profileName": "cold",
+      "complete": true,
+      "incompleteReasons": [],
+      "missingWorkflows": [],
+      "missingJobs": [],
+      "cancelledJobs": [],
+      "failedJobs": [],
+      "partialTimestampJobs": [],
+      "timestampResolution": "1s",
+      "metrics": {
+        "repoMinutes": 83.7,
+        "rawRunnerSeconds": 5022,
+        "wallClockSeconds": 5032,
+        "prWallClockSeconds": null,
+        "mainWallClockSeconds": 5032,
+        "triggerLatencySeconds": 4,
+        "harnessOverheadSeconds": 1,
+        "maxJobQueueSeconds": 7,
+        "maxJobQueueLabel": "ubuntu-22.04-4core"
+      },
+      "workflows": [
+        {
+          "runId": 43790178180,
+          "runAttempt": 1,
+          "priorAttemptsCount": 0,
+          "workflowPath": ".github/workflows/ci.yml",
+          "workflowName": "CI/CD",
+          "event": "push",
+          "conclusion": "success",
+          "durationSeconds": 5032,
+          "startedAt": "2026-11-16T02:06:56Z",
+          "completedAt": "2026-11-16T03:30:48Z",
+          "htmlUrl": "https://github.com/starsling-demo-org/benchmark-mirotalksfu/actions/runs/43790178180",
+          "jobs": [
+            {
+              "jobRecordId": 133046582453,
+              "runId": 43790178180,
+              "runAttempt": 1,
+              "workflowPath": ".github/workflows/ci.yml",
+              "jobName": "test",
+              "logicalJobId": "test",
+              "conclusion": "success",
+              "durationSeconds": 31,
+              "dependencyWaitSeconds": 0,
+              "runnerQueueSeconds": 2,
+              "resolution": "1s",
+              "labels": [
+                "ubuntu-22.04-4core"
+              ],
+              "steps": [
+                {
+                  "number": 1,
+                  "name": "Set up job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 2,
+                  "name": "Benchmark event context (harness)",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": true
+                },
+                {
+                  "number": 3,
+                  "name": "Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 4,
+                  "name": "Run actions/setup-node@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 5,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 5,
+                  "name": "Run npm ci",
+                  "conclusion": "success",
+                  "durationSeconds": 10,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 6,
+                  "name": "Run cp app/src/config.template.js app/src/config.js",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 7,
+                  "name": "Run npm test",
+                  "conclusion": "success",
+                  "durationSeconds": 10,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 13,
+                  "name": "Post Run actions/setup-node@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 14,
+                  "name": "Post Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 15,
+                  "name": "Complete job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                }
+              ]
+            },
+            {
+              "jobRecordId": 133046752760,
+              "runId": 43790178180,
+              "runAttempt": 1,
+              "workflowPath": ".github/workflows/ci.yml",
+              "jobName": "build",
+              "logicalJobId": "build",
+              "conclusion": "success",
+              "durationSeconds": 4991,
+              "dependencyWaitSeconds": 0,
+              "runnerQueueSeconds": 7,
+              "resolution": "1s",
+              "labels": [
+                "ubuntu-22.04-4core"
+              ],
+              "steps": [
+                {
+                  "number": 1,
+                  "name": "Set up job",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 2,
+                  "name": "Benchmark event context (harness)",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": true
+                },
+                {
+                  "number": 3,
+                  "name": "Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 4,
+                  "name": "Run docker/login-action@v3",
+                  "conclusion": "skipped",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 5,
+                  "name": "Run docker/setup-qemu-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 9,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 6,
+                  "name": "Run docker/setup-buildx-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 5,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 7,
+                  "name": "Build & Push",
+                  "conclusion": "success",
+                  "durationSeconds": 4952,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 11,
+                  "name": "Post Build & Push",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 12,
+                  "name": "Post Run docker/setup-buildx-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 13,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 13,
+                  "name": "Post Run docker/setup-qemu-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 2,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 14,
+                  "name": "Post Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 15,
+                  "name": "Complete job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                }
+              ]
+            }
+          ],
+          "artifacts": [
+            {
+              "id": 14195950441,
+              "run_id": 43790178180,
+              "name": "starsling-demo-org~benchmark-mirotalksfu~UN3XKX.dockerbuild",
+              "size_in_bytes": 104994,
+              "sha256": "a83920482fec186e1c249f6d2885f0829b3b1920ba774bcf090a04bccb509cce",
+              "created_at": "2026-11-16T03:30:31Z",
+              "expired": false
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 14195950441,
+          "run_id": 43790178180,
+          "name": "starsling-demo-org~benchmark-mirotalksfu~UN3XKX.dockerbuild",
+          "size_in_bytes": 104994,
+          "sha256": "a83920482fec186e1c249f6d2885f0829b3b1920ba774bcf090a04bccb509cce",
+          "created_at": "2026-11-16T03:30:31Z",
+          "expired": false
+        }
+      ],
+      "inputFingerprint": "dfd9c8970dac49703abcb90ac39f41ef4678db7a65a95d62d257e34972bf5d49"
+    },
+    {
+      "sampleId": "diag-1-main-push-cold-rep1-starsling-baseline",
+      "repetition": 1,
+      "scenarioName": "main-push",
+      "variant": "starsling-baseline",
+      "profileName": "cold",
+      "complete": false,
+      "incompleteReasons": [
+        "Workflow not successful: .github/workflows/ci.yml",
+        "Failed jobs: .github/workflows/ci.yml#build",
+        "Staging failed: Incomplete sample diag-1-main-push-cold-rep1-starsling-baseline; state remains leased for collect/recover"
+      ],
+      "missingWorkflows": [],
+      "missingJobs": [],
+      "cancelledJobs": [],
+      "failedJobs": [
+        ".github/workflows/ci.yml#build"
+      ],
+      "partialTimestampJobs": [],
+      "timestampResolution": "1s",
+      "metrics": {
+        "repoMinutes": 0.9167,
+        "rawRunnerSeconds": 55,
+        "wallClockSeconds": 71,
+        "prWallClockSeconds": null,
+        "mainWallClockSeconds": 71,
+        "triggerLatencySeconds": 5,
+        "harnessOverheadSeconds": 0,
+        "maxJobQueueSeconds": 8,
+        "maxJobQueueLabel": "starsling-ubuntu-24.04"
+      },
+      "workflows": [
+        {
+          "runId": 43799746726,
+          "runAttempt": 1,
+          "priorAttemptsCount": 0,
+          "workflowPath": ".github/workflows/ci.yml",
+          "workflowName": "CI/CD",
+          "event": "push",
+          "conclusion": "failure",
+          "durationSeconds": 71,
+          "startedAt": "2026-11-16T03:42:13Z",
+          "completedAt": "2026-11-16T03:43:24Z",
+          "htmlUrl": "https://github.com/starsling-demo-org/benchmark-mirotalksfu/actions/runs/43799746726",
+          "jobs": [
+            {
+              "jobRecordId": 133076775468,
+              "runId": 43799746726,
+              "runAttempt": 1,
+              "workflowPath": ".github/workflows/ci.yml",
+              "jobName": "test",
+              "logicalJobId": "test",
+              "conclusion": "success",
+              "durationSeconds": 24,
+              "dependencyWaitSeconds": 0,
+              "runnerQueueSeconds": 8,
+              "resolution": "1s",
+              "labels": [
+                "starsling-ubuntu-24.04"
+              ],
+              "steps": [
+                {
+                  "number": 1,
+                  "name": "Set up job",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 2,
+                  "name": "Set up runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 3,
+                  "name": "Benchmark event context (harness)",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": true
+                },
+                {
+                  "number": 4,
+                  "name": "Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 2,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 5,
+                  "name": "Run actions/setup-node@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 6,
+                  "name": "Run npm ci",
+                  "conclusion": "success",
+                  "durationSeconds": 5,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 7,
+                  "name": "Run cp app/src/config.template.js app/src/config.js",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 8,
+                  "name": "Run npm test",
+                  "conclusion": "success",
+                  "durationSeconds": 6,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 14,
+                  "name": "Post Run actions/setup-node@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 15,
+                  "name": "Post Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 16,
+                  "name": "Complete runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 17,
+                  "name": "Complete job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                }
+              ]
+            },
+            {
+              "jobRecordId": 133076944657,
+              "runId": 43799746726,
+              "runAttempt": 1,
+              "workflowPath": ".github/workflows/ci.yml",
+              "jobName": "build",
+              "logicalJobId": "build",
+              "conclusion": "failure",
+              "durationSeconds": 31,
+              "dependencyWaitSeconds": 0,
+              "runnerQueueSeconds": 8,
+              "resolution": "1s",
+              "labels": [
+                "starsling-ubuntu-24.04"
+              ],
+              "steps": [
+                {
+                  "number": 1,
+                  "name": "Set up job",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 2,
+                  "name": "Set up runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 3,
+                  "name": "Benchmark event context (harness)",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": true
+                },
+                {
+                  "number": 4,
+                  "name": "Run actions/checkout@v4",
+                  "conclusion": "failure",
+                  "durationSeconds": 26,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 5,
+                  "name": "Run docker/login-action@v3",
+                  "conclusion": "skipped",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 6,
+                  "name": "Run docker/setup-qemu-action@v3",
+                  "conclusion": "skipped",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 7,
+                  "name": "Run docker/setup-buildx-action@v3",
+                  "conclusion": "skipped",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 8,
+                  "name": "Build & Push",
+                  "conclusion": "skipped",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 15,
+                  "name": "Post Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 16,
+                  "name": "Complete runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 17,
+                  "name": "Complete job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                }
+              ]
+            }
+          ],
+          "artifacts": []
+        }
+      ],
+      "artifacts": [],
+      "inputFingerprint": "dfd9c8970dac49703abcb90ac39f41ef4678db7a65a95d62d257e34972bf5d49"
+    },
+    {
+      "sampleId": "diag-1-main-push-cold-rep1-starsling-baseline-retry1",
+      "repetition": 1,
+      "scenarioName": "main-push",
+      "variant": "starsling-baseline",
+      "profileName": "cold",
+      "complete": true,
+      "incompleteReasons": [],
+      "missingWorkflows": [],
+      "missingJobs": [],
+      "cancelledJobs": [],
+      "failedJobs": [],
+      "partialTimestampJobs": [],
+      "timestampResolution": "1s",
+      "metrics": {
+        "repoMinutes": 26.65,
+        "rawRunnerSeconds": 1599,
+        "wallClockSeconds": 1613,
+        "prWallClockSeconds": null,
+        "mainWallClockSeconds": 1613,
+        "triggerLatencySeconds": 4,
+        "harnessOverheadSeconds": 0,
+        "maxJobQueueSeconds": 7,
+        "maxJobQueueLabel": "starsling-ubuntu-24.04"
+      },
+      "workflows": [
+        {
+          "runId": 43800200339,
+          "runAttempt": 1,
+          "priorAttemptsCount": 0,
+          "workflowPath": ".github/workflows/ci.yml",
+          "workflowName": "CI/CD",
+          "event": "push",
+          "conclusion": "success",
+          "durationSeconds": 1613,
+          "startedAt": "2026-11-16T03:47:00Z",
+          "completedAt": "2026-11-16T04:13:53Z",
+          "htmlUrl": "https://github.com/starsling-demo-org/benchmark-mirotalksfu/actions/runs/43800200339",
+          "jobs": [
+            {
+              "jobRecordId": 133078341549,
+              "runId": 43800200339,
+              "runAttempt": 1,
+              "workflowPath": ".github/workflows/ci.yml",
+              "jobName": "test",
+              "logicalJobId": "test",
+              "conclusion": "success",
+              "durationSeconds": 19,
+              "dependencyWaitSeconds": 0,
+              "runnerQueueSeconds": 6,
+              "resolution": "1s",
+              "labels": [
+                "starsling-ubuntu-24.04"
+              ],
+              "steps": [
+                {
+                  "number": 1,
+                  "name": "Set up job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 2,
+                  "name": "Set up runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 3,
+                  "name": "Benchmark event context (harness)",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": true
+                },
+                {
+                  "number": 4,
+                  "name": "Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 5,
+                  "name": "Run actions/setup-node@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 6,
+                  "name": "Run npm ci",
+                  "conclusion": "success",
+                  "durationSeconds": 5,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 7,
+                  "name": "Run cp app/src/config.template.js app/src/config.js",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 8,
+                  "name": "Run npm test",
+                  "conclusion": "success",
+                  "durationSeconds": 6,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 14,
+                  "name": "Post Run actions/setup-node@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 15,
+                  "name": "Post Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 16,
+                  "name": "Complete runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 17,
+                  "name": "Complete job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                }
+              ]
+            },
+            {
+              "jobRecordId": 133078477004,
+              "runId": 43800200339,
+              "runAttempt": 1,
+              "workflowPath": ".github/workflows/ci.yml",
+              "jobName": "build",
+              "logicalJobId": "build",
+              "conclusion": "success",
+              "durationSeconds": 1580,
+              "dependencyWaitSeconds": 0,
+              "runnerQueueSeconds": 7,
+              "resolution": "1s",
+              "labels": [
+                "starsling-ubuntu-24.04"
+              ],
+              "steps": [
+                {
+                  "number": 1,
+                  "name": "Set up job",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 2,
+                  "name": "Set up runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 3,
+                  "name": "Benchmark event context (harness)",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": true
+                },
+                {
+                  "number": 4,
+                  "name": "Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 5,
+                  "name": "Run docker/login-action@v3",
+                  "conclusion": "skipped",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 6,
+                  "name": "Run docker/setup-qemu-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 2,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 7,
+                  "name": "Run docker/setup-buildx-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 8,
+                  "name": "Build & Push",
+                  "conclusion": "success",
+                  "durationSeconds": 1566,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 12,
+                  "name": "Post Build & Push",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 13,
+                  "name": "Post Run docker/setup-buildx-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 3,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 14,
+                  "name": "Post Run docker/setup-qemu-action@v3",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 15,
+                  "name": "Post Run actions/checkout@v4",
+                  "conclusion": "success",
+                  "durationSeconds": 1,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 16,
+                  "name": "Complete runner",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                },
+                {
+                  "number": 17,
+                  "name": "Complete job",
+                  "conclusion": "success",
+                  "durationSeconds": 0,
+                  "resolution": "1s",
+                  "isHarnessInstrumentation": false
+                }
+              ]
+            }
+          ],
+          "artifacts": [
+            {
+              "id": 14197476142,
+              "run_id": 43800200339,
+              "name": "starsling-demo-org~benchmark-mirotalksfu~0JZ1RG.dockerbuild",
+              "size_in_bytes": 98598,
+              "sha256": "ad35cd0264d24d4539c44487cf54fd51bd6e1289f86ad5cc8fa294b680e3f8e9",
+              "created_at": "2026-11-16T04:13:47Z",
+              "expired": false
+            }
+          ]
+        }
+      ],
+      "artifacts": [
+        {
+          "id": 14197476142,
+          "run_id": 43800200339,
+          "name": "starsling-demo-org~benchmark-mirotalksfu~0JZ1RG.dockerbuild",
+          "size_in_bytes": 98598,
+          "sha256": "ad35cd0264d24d4539c44487cf54fd51bd6e1289f86ad5cc8fa294b680e3f8e9",
+          "created_at": "2026-11-16T04:13:47Z",
+          "expired": false
+        }
+      ],
+      "inputFingerprint": "dfd9c8970dac49703abcb90ac39f41ef4678db7a65a95d62d257e34972bf5d49"
+    }
+  ],
+  "seedSamples": [],
+  "cacheSnapshots": {
+    "diag-1-main-push-cold-rep1-github-baseline": [
+      {
+        "id": 10574792389,
+        "ref": "refs/heads/main",
+        "key": "docker.io--tonistiigi--binfmt-latest-linux-x64",
+        "version": "0f256030c2162b26c4af1b51965f055655033ea67381759b247836dd596e3432",
+        "last_accessed_at": "2026-11-16T01:58:55.924888Z",
+        "created_at": "2026-11-16T01:58:55.924888Z",
+        "size_in_bytes": 32265035
+      },
+      {
+        "id": 10574547514,
+        "ref": "refs/heads/main",
+        "key": "node-cache-Linux-x64-npm-b3654770bf90d498f0ea8e24ea8398a938aa0ced1e4892b9661d3b105b302b1c",
+        "version": "04d00cc68e25ee34fd8b04095d0a46a28244d98af53e6925e47ed311d487b1d6",
+        "last_accessed_at": "2026-11-16T01:49:40.816602Z",
+        "created_at": "2026-11-16T01:49:40.816602Z",
+        "size_in_bytes": 56383877
+      }
+    ],
+    "diag-1-main-push-cold-rep1-starsling-baseline": [
+      {
+        "id": 10577362581,
+        "ref": "refs/heads/main",
+        "key": "docker.io--tonistiigi--binfmt-latest-linux-x64",
+        "version": "0f256030c2162b26c4af1b51965f055655033ea67381759b247836dd596e3432",
+        "last_accessed_at": "2026-11-16T03:30:46.307680Z",
+        "created_at": "2026-11-16T03:30:46.307680Z",
+        "size_in_bytes": 32265025
+      },
+      {
+        "id": 10577354588,
+        "ref": "refs/heads/main",
+        "key": "index-mirotalksfu-1-f921bd05#1",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:30.016961Z",
+        "created_at": "2026-11-16T03:30:30.016961Z",
+        "size_in_bytes": 13837
+      },
+      {
+        "id": 10577354480,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:f1603acc8764d1036f5b5be366bd409243f599166e2da0c4f675e8abe62e6cbc",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:29.787460Z",
+        "created_at": "2026-11-16T03:30:29.787460Z",
+        "size_in_bytes": 93
+      },
+      {
+        "id": 10577353054,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:ecbc453297154b3878b30b2dc65636b9fb1c72888ce99b16ab2860c9e91c06fb",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:29.586342Z",
+        "created_at": "2026-11-16T03:30:29.586342Z",
+        "size_in_bytes": 54542697
+      },
+      {
+        "id": 10577352936,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:e96d66bd5581d5c37d70735678905f5afbfed3834c0842971c61284f4bba6604",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:26.929535Z",
+        "created_at": "2026-11-16T03:30:26.929535Z",
+        "size_in_bytes": 28450
+      },
+      {
+        "id": 10577352794,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:e727da478d47d626146e734dd426cad789beb1fe49c55a06a175621d30f31064",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:26.702861Z",
+        "created_at": "2026-11-16T03:30:26.702861Z",
+        "size_in_bytes": 1713083
+      },
+      {
+        "id": 10577351118,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:de7118bda79aaa3022acf6f2073644cec27c8bc65f7e043d8d0163c037ecac93",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:26.442906Z",
+        "created_at": "2026-11-16T03:30:26.442906Z",
+        "size_in_bytes": 55659270
+      },
+      {
+        "id": 10577350388,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:dd051e1b8c92ff101fa3071ab97ea4924885942f15644e01c3dc095764e863e3",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:23.410535Z",
+        "created_at": "2026-11-16T03:30:23.410535Z",
+        "size_in_bytes": 28247982
+      },
+      {
+        "id": 10577350219,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:d986258b0f3211c77d80598ee53ce54ab405e3a228bd429fb74c37a977aad8db",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:21.939943Z",
+        "created_at": "2026-11-16T03:30:21.939943Z",
+        "size_in_bytes": 1713002
+      },
+      {
+        "id": 10577348297,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:c55ed24f3d3842a3c65c5191c579d930c9ce2dd625401c818c96d47ee5089985",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:21.610784Z",
+        "created_at": "2026-11-16T03:30:21.610784Z",
+        "size_in_bytes": 51083534
+      },
+      {
+        "id": 10577348210,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:c34f02d00fde0767e1607c15d336cb71414e607acb0b4e63680a37c007b76204",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:18.031140Z",
+        "created_at": "2026-11-16T03:30:18.031140Z",
+        "size_in_bytes": 448
+      },
+      {
+        "id": 10577344530,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:bc63a81b1e136414b3fb985dc50d7de62eb5bd85f6524bd79e0ffc76dee00e1f",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:17.869499Z",
+        "created_at": "2026-11-16T03:30:17.869499Z",
+        "size_in_bytes": 120184636
+      },
+      {
+        "id": 10577342749,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:b0c85bc24834d872ce7019de2bd867556b030888a5d57f18961fdec145452849",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:11.545870Z",
+        "created_at": "2026-11-16T03:30:11.545870Z",
+        "size_in_bytes": 54659490
+      },
+      {
+        "id": 10577338916,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:a9121caec0b9cd4ad577cdac9ffcf822d26cfdfff55591ad82ddeba3d95d8eeb",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:08.577433Z",
+        "created_at": "2026-11-16T03:30:08.577433Z",
+        "size_in_bytes": 113933554
+      },
+      {
+        "id": 10577338805,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:a589b06a3398ce70909f2e0995a3750cb1b6095d3164d0b29d91d0b5777eaae1",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:02.258861Z",
+        "created_at": "2026-11-16T03:30:02.258861Z",
+        "size_in_bytes": 55687
+      },
+      {
+        "id": 10577336998,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:a49a16ba46e0005bbf11734b87dd0b0fdc23cb5c7916440930f8a06bae2e2098",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:30:02.071578Z",
+        "created_at": "2026-11-16T03:30:02.071578Z",
+        "size_in_bytes": 55773522
+      },
+      {
+        "id": 10577335925,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:8a688b8087d665de3bb05593d7e4cb41a8162db49bd43568a580d933027eedd2",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:59.217517Z",
+        "created_at": "2026-11-16T03:29:59.217517Z",
+        "size_in_bytes": 36577331
+      },
+      {
+        "id": 10577335835,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:8992df00a3300f6365d39c8a19e50495f9aa2802dfdda1bb279aa45d70ae32be",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:56.860100Z",
+        "created_at": "2026-11-16T03:29:56.860100Z",
+        "size_in_bytes": 55687
+      },
+      {
+        "id": 10577335734,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:55034755305eb7da1d391bfdc3b9a21ec874143764fa42d8fcab365a4565de2d",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:56.646357Z",
+        "created_at": "2026-11-16T03:29:56.646357Z",
+        "size_in_bytes": 176190
+      },
+      {
+        "id": 10577334136,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:5030a48eb5b08bea228f0db8440fed216cf91b5ca4d999bc2a692c2eb0a60114",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:56.416168Z",
+        "created_at": "2026-11-16T03:29:56.416168Z",
+        "size_in_bytes": 51100367
+      },
+      {
+        "id": 10577333141,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:48f840e7db58fa3a77495a564c6e1577d17c5c1788ec53d3e252b50a3d3b2c29",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:53.027569Z",
+        "created_at": "2026-11-16T03:29:53.027569Z",
+        "size_in_bytes": 36577330
+      },
+      {
+        "id": 10577333026,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:3f267682a8fd60a8df67225f4f8fd8f9d510d4b1358bc1a640c746a4e8db1478",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:50.918964Z",
+        "created_at": "2026-11-16T03:29:50.918964Z",
+        "size_in_bytes": 176186
+      },
+      {
+        "id": 10577332905,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:3b9db0f2083f390c54887c836fbb1b9b6ff701484f79b209900670f4487fce53",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:50.657734Z",
+        "created_at": "2026-11-16T03:29:50.657734Z",
+        "size_in_bytes": 448
+      },
+      {
+        "id": 10577331517,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:32db4eab23dcfe2410757114ad1537a739e4b3283fd516e852868f1e8685f37c",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:50.399321Z",
+        "created_at": "2026-11-16T03:29:50.399321Z",
+        "size_in_bytes": 56860318
+      },
+      {
+        "id": 10577329952,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:30183a4d7aabf6b5f0564a9a0e3dbba8d2f7b628425f4efd93689bbe99a0bdea",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:47.370379Z",
+        "created_at": "2026-11-16T03:29:47.370379Z",
+        "size_in_bytes": 57465352
+      },
+      {
+        "id": 10577329848,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:2f0a23b120bf4bcb8925da2fe65d62c7644c93ef1bb118f55781e9acd9c687a0",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:43.878103Z",
+        "created_at": "2026-11-16T03:29:43.878103Z",
+        "size_in_bytes": 28444
+      },
+      {
+        "id": 10577329209,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:2d66c782e4847b8495b17a4b86be1159aa13d140fe4fd17cb1d536953d5114c6",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:43.648397Z",
+        "created_at": "2026-11-16T03:29:43.648397Z",
+        "size_in_bytes": 28144358
+      },
+      {
+        "id": 10577329120,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:22a7c5e442cd30f0c37eb73f2f6d91be1c6b63bd1c4278641b042fe77b260f33",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:42.257357Z",
+        "created_at": "2026-11-16T03:29:42.257357Z",
+        "size_in_bytes": 3314
+      },
+      {
+        "id": 10577329019,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:1862604d546b2eb5af2ab888fb8184d668ad6aa7d1856962c4a53d8630684eb8",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:42.059341Z",
+        "created_at": "2026-11-16T03:29:42.059341Z",
+        "size_in_bytes": 93
+      },
+      {
+        "id": 10577328914,
+        "ref": "refs/heads/main",
+        "key": "buildkit-blob-1-sha256:055bc5bfa66f96e35d7c6ea1237a5d6db8513f7278ce1a81208740b6103188de",
+        "version": "693bb7016429d80366022f036f84856888c9f13e00145f5f6f4dce303a38d6f2",
+        "last_accessed_at": "2026-11-16T03:29:41.842753Z",
+        "created_at": "2026-11-16T03:29:41.842753Z",
+        "size_in_bytes": 3311
+      },
+      {
+        "id": 10575019316,
+        "ref": "refs/heads/main",
+        "key": "node-cache-Linux-x64-npm-b3654770bf90d498f0ea8e24ea8398a938aa0ced1e4892b9661d3b105b302b1c",
+        "version": "04d00cc68e25ee34fd8b04095d0a46a28244d98af53e6925e47ed311d487b1d6",
+        "last_accessed_at": "2026-11-16T02:07:28.748417Z",
+        "created_at": "2026-11-16T02:07:28.748417Z",
+        "size_in_bytes": 56383350
+      }
+    ],
+    "diag-1-main-push-cold-rep1-starsling-baseline-retry1": [
+      {
+        "id": 10577666237,
+        "ref": "refs/heads/main",
+        "key": "node-cache-Linux-x64-npm-b3654770bf90d498f0ea8e24ea8398a938aa0ced1e4892b9661d3b105b302b1c",
+        "version": "04d00cc68e25ee34fd8b04095d0a46a28244d98af53e6925e47ed311d487b1d6",
+        "last_accessed_at": "2026-11-16T03:42:42.214757Z",
+        "created_at": "2026-11-16T03:42:42.214757Z",
+        "size_in_bytes": 56380036
+      }
+    ]
+  },
+  "harnessHash": "54ba2b377bd5b58d4d9afa43dfdc957f6d0eb149d407b59c8821bb5852d6127e",
+  "apiUsage": {
+    "budgetPerHour": 252,
+    "experiment": {
+      "calls": 99,
+      "notModified": 226,
+      "graphql": 0,
+      "byCategory": {
+        "other-read": 1,
+        "run-list": 20,
+        "workflows": 9,
+        "caches": 6,
+        "cache-delete": 34,
+        "workflow-write": 7,
+        "jobs": 10,
+        "artifacts": 5,
+        "job-logs": 6,
+        "run-read": 1
+      },
+      "throttledMs": 1132152,
+      "rateLimitWaitMs": 0
+    },
+    "samples": {
+      "diag-1-main-push-cold-rep1-github-baseline": {
+        "calls": 19,
+        "notModified": 139,
+        "graphql": 0,
+        "byCategory": {
+          "run-list": 6,
+          "workflows": 3,
+          "workflow-write": 2,
+          "jobs": 4,
+          "artifacts": 2,
+          "job-logs": 2
+        },
+        "throttledMs": 260003,
+        "rateLimitWaitMs": 0
+      },
+      "diag-1-main-push-cold-rep1-starsling-baseline": {
+        "calls": 14,
+        "notModified": 17,
+        "graphql": 0,
+        "byCategory": {
+          "run-list": 4,
+          "workflows": 2,
+          "workflow-write": 2,
+          "jobs": 3,
+          "artifacts": 1,
+          "job-logs": 2
+        },
+        "throttledMs": 617146,
+        "rateLimitWaitMs": 0
+      },
+      "diag-1-main-push-cold-rep1-starsling-baseline-retry1": {
+        "calls": 16,
+        "notModified": 58,
+        "graphql": 0,
+        "byCategory": {
+          "run-list": 5,
+          "workflows": 2,
+          "workflow-write": 2,
+          "jobs": 3,
+          "artifacts": 2,
+          "job-logs": 2
+        },
+        "throttledMs": 188574,
+        "rateLimitWaitMs": 0
+      }
+    }
+  },
+  "cacheResets": [
+    "diag-1-main-push-cold-rep1-github-baseline",
+    "diag-1-main-push-cold-rep1-starsling-baseline",
+    "diag-1-main-push-cold-rep1-starsling-baseline-retry1"
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "scenarioName": "main-push",
+  "upstreamRepository": "miroslavpejic85/mirotalksfu",
+  "event": "push",
+  "headSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+  "retrievedAt": "2026-11-15T22:46:58.356Z",
+  "runs": [
+    {
+      "runId": 42260522986,
+      "attempt": 1,
+      "workflowPath": ".github/workflows/ci.yml",
+      "workflowName": "CI/CD",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "htmlUrl": "https://github.com/miroslavpejic85/mirotalksfu/actions/runs/42260522986",
+      "createdAt": "2026-11-06T17:19:09Z",
+      "startedAt": "2026-11-06T17:19:09Z",
+      "jobs": [
+        {
+          "id": 128038945805,
+          "name": "test",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-06T17:19:12Z",
+          "completedAt": "2026-11-06T17:19:44Z",
+          "durationSeconds": 32,
+          "labels": [
+            "ubuntu-22.04"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v4",
+              "conclusion": "success",
+              "durationSeconds": 2
+            },
+            {
+              "number": 3,
+              "name": "Run actions/setup-node@v4",
+              "conclusion": "success",
+              "durationSeconds": 5
+            },
+            {
+              "number": 4,
+              "name": "Run npm ci",
+              "conclusion": "success",
+              "durationSeconds": 11
+            },
+            {
+              "number": 5,
+              "name": "Run cp app/src/config.template.js app/src/config.js",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 6,
+              "name": "Run npm test",
+              "conclusion": "success",
+              "durationSeconds": 9
+            },
+            {
+              "number": 11,
+              "name": "Post Run actions/setup-node@v4",
+              "conclusion": "success",
+              "durationSeconds": 2
+            },
+            {
+              "number": 12,
+              "name": "Post Run actions/checkout@v4",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 13,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        },
+        {
+          "id": 128039254377,
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "startedAt": "2026-11-06T17:19:46Z",
+          "completedAt": "2026-11-06T18:29:03Z",
+          "durationSeconds": 4157,
+          "labels": [
+            "ubuntu-22.04"
+          ],
+          "steps": [
+            {
+              "number": 1,
+              "name": "Set up job",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 2,
+              "name": "Run actions/checkout@v4",
+              "conclusion": "success",
+              "durationSeconds": 3
+            },
+            {
+              "number": 3,
+              "name": "Run docker/login-action@v3",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 4,
+              "name": "Run docker/setup-qemu-action@v3",
+              "conclusion": "success",
+              "durationSeconds": 7
+            },
+            {
+              "number": 5,
+              "name": "Run docker/setup-buildx-action@v3",
+              "conclusion": "success",
+              "durationSeconds": 5
+            },
+            {
+              "number": 6,
+              "name": "Build & Push",
+              "conclusion": "success",
+              "durationSeconds": 4124
+            },
+            {
+              "number": 8,
+              "name": "Post Build & Push",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 9,
+              "name": "Post Run docker/setup-buildx-action@v3",
+              "conclusion": "success",
+              "durationSeconds": 13
+            },
+            {
+              "number": 10,
+              "name": "Post Run docker/setup-qemu-action@v3",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 11,
+              "name": "Post Run docker/login-action@v3",
+              "conclusion": "success",
+              "durationSeconds": 1
+            },
+            {
+              "number": 12,
+              "name": "Post Run actions/checkout@v4",
+              "conclusion": "success",
+              "durationSeconds": 0
+            },
+            {
+              "number": 13,
+              "name": "Complete job",
+              "conclusion": "success",
+              "durationSeconds": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metrics": {
+    "wallClockSeconds": 4194,
+    "runnerSeconds": 4189
+  }
+}

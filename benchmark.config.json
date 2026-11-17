@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 1,
+  "upstream": {
+    "repository": "miroslavpejic85/mirotalksfu",
+    "commitSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+    "defaultBranch": "main"
+  },
+  "benchmarkRepository": {
+    "repository": "starsling-demo-org/benchmark-mirotalksfu",
+    "controlBranch": "bench/control",
+    "defaultBranch": "showcase",
+    "replayBranch": "main"
+  },
+  "scenarios": {
+    "main-push": {
+      "name": "main-push",
+      "description": "Merge of e76e48f678f2 to main",
+      "event": "push",
+      "main": {
+        "branch": "main",
+        "beforeSha": "46231380d204cdbedad665608006cad9042a58f0",
+        "afterSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+        "changedPaths": [
+          ".env.template",
+          "app/src/Server.js",
+          "app/src/config.template.js",
+          "package-lock.json",
+          "package.json",
+          "public/css/VideoGrid.css",
+          "public/js/Brand.js",
+          "public/js/Room.js",
+          "public/js/RoomClient.js",
+          "public/js/ScreenCameraLayout.js",
+          "public/js/ScreenTouchZoom.js",
+          "public/js/VideoGrid.js",
+          "public/lang/ar.json",
+          "public/lang/bn.json",
+          "public/lang/de.json",
+          "public/lang/en.json",
+          "public/lang/es.json",
+          "public/lang/fa.json",
+          "public/lang/fr.json",
+          "public/lang/hi.json",
+          "public/lang/hu.json",
+          "public/lang/id.json",
+          "public/lang/it.json",
+          "public/lang/ja.json",
+          "public/lang/ko.json",
+          "public/lang/mr.json",
+          "public/lang/nl.json",
+          "public/lang/pl.json",
+          "public/lang/pt.json",
+          "public/lang/ru.json",
+          "public/lang/sr.json",
+          "public/lang/sw.json",
+          "public/lang/ta.json",
+          "public/lang/te.json",
+          "public/lang/th.json",
+          "public/lang/tr.json",
+          "public/lang/uk.json",
+          "public/lang/ur.json",
+          "public/lang/vi.json",
+          "public/lang/zh.json",
+          "public/views/Room.html",
+          "tests/test-ScreenCameraLayout.js",
+          "tests/test-ScreenTouchZoom.js"
+        ]
+      },
+      "referenceRuns": [
+        {
+          "workflowPath": ".github/workflows/ci.yml",
+          "runId": 42260522986,
+          "attempt": 1,
+          "htmlUrl": "https://github.com/miroslavpejic85/mirotalksfu/actions/runs/42260522986"
+        }
+      ]
+    },
+    "seed-parent": {
+      "name": "seed-parent",
+      "role": "seed",
+      "description": "Warm seed: the previous push (46231380d204 onto ff41c0d62bd9)",
+      "event": "push",
+      "main": {
+        "branch": "main",
+        "beforeSha": "ff41c0d62bd9e7518a2d9b20f7b223b17ae29923",
+        "afterSha": "46231380d204cdbedad665608006cad9042a58f0",
+        "changedPaths": [
+          ".env.template",
+          "app/src/Server.js",
+          "app/src/config.template.js",
+          "package-lock.json",
+          "package.json",
+          "public/js/AppSwitcher.js",
+          "public/js/Brand.js",
+          "public/js/Room.js",
+          "public/js/RoomClient.js",
+          "public/lang/ar.json",
+          "public/lang/bn.json",
+          "public/lang/de.json",
+          "public/lang/en.json",
+          "public/lang/es.json",
+          "public/lang/fa.json",
+          "public/lang/fr.json",
+          "public/lang/hi.json",
+          "public/lang/hu.json",
+          "public/lang/id.json",
+          "public/lang/it.json",
+          "public/lang/ja.json",
+          "public/lang/ko.json",
+          "public/lang/mr.json",
+          "public/lang/nl.json",
+          "public/lang/pl.json",
+          "public/lang/pt.json",
+          "public/lang/ru.json",
+          "public/lang/sr.json",
+          "public/lang/sw.json",
+          "public/lang/ta.json",
+          "public/lang/te.json",
+          "public/lang/th.json",
+          "public/lang/tr.json",
+          "public/lang/uk.json",
+          "public/lang/ur.json",
+          "public/lang/vi.json",
+          "public/lang/zh.json",
+          "public/views/landing.html",
+          "tests/test-AppSwitcher.js"
+        ]
+      },
+      "referenceRuns": []
+    }
+  },
+  "patches": [
+    {
+      "id": "stack-0",
+      "source": "local",
+      "pathOrUrl": "patches/stack-0.patch",
+      "description": "levers stacked in order: 01-mediasoup-worker-stage"
+    }
+  ],
+  "runnerMapping": {
+    "defaultMap": {
+      "ubuntu-latest": {
+        "github": "TODO-github-larger-runner-for-ubuntu-latest",
+        "starsling": "starsling-ubuntu-24.04"
+      },
+      "ubuntu-24.04": {
+        "github": "TODO-github-larger-runner-for-ubuntu-24.04",
+        "starsling": "starsling-ubuntu-24.04"
+      },
+      "ubuntu-26.04": {
+        "github": "TODO-github-larger-runner-for-ubuntu-26.04",
+        "starsling": "starsling-ubuntu-26.04"
+      },
+      "ubuntu-slim": {
+        "github": "TODO-github-larger-runner-for-ubuntu-slim",
+        "starsling": "starsling-ubuntu-24.04-2"
+      },
+      "ubuntu-22.04": {
+        "github": "ubuntu-22.04-4core",
+        "starsling": "starsling-ubuntu-24.04"
+      }
+    },
+    "runnerSpecs": {
+      "ubuntu-latest": {
+        "label": "ubuntu-latest",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      },
+      "ubuntu-24.04": {
+        "label": "ubuntu-24.04",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      },
+      "ubuntu-26.04": {
+        "label": "ubuntu-26.04",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      },
+      "ubuntu-slim": {
+        "label": "ubuntu-slim",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 1,
+        "ramGiB": 5,
+        "billingPerMinuteUsd": 0.004
+      },
+      "starsling-ubuntu-24.04-2": {
+        "label": "starsling-ubuntu-24.04-2",
+        "provider": "starsling",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 2,
+        "ramGiB": 8,
+        "billingPerMinuteUsd": 0.004
+      },
+      "starsling-ubuntu-24.04": {
+        "label": "starsling-ubuntu-24.04",
+        "provider": "starsling",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.008
+      },
+      "starsling-ubuntu-26.04": {
+        "label": "starsling-ubuntu-26.04",
+        "provider": "starsling",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.008
+      },
+      "macos-latest": {
+        "label": "macos-latest",
+        "provider": "github",
+        "os": "macos",
+        "arch": "arm64",
+        "vcpu": 3,
+        "ramGiB": 7,
+        "billingPerMinuteUsd": 0.08
+      },
+      "windows-latest": {
+        "label": "windows-latest",
+        "provider": "github",
+        "os": "windows",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.032
+      },
+      "TODO-github-larger-runner-for-ubuntu-latest": {
+        "label": "TODO-github-larger-runner-for-ubuntu-latest",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      },
+      "TODO-github-larger-runner-for-ubuntu-24.04": {
+        "label": "TODO-github-larger-runner-for-ubuntu-24.04",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      },
+      "TODO-github-larger-runner-for-ubuntu-26.04": {
+        "label": "TODO-github-larger-runner-for-ubuntu-26.04",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      },
+      "TODO-github-larger-runner-for-ubuntu-slim": {
+        "label": "TODO-github-larger-runner-for-ubuntu-slim",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 1,
+        "ramGiB": 5,
+        "billingPerMinuteUsd": 0.004
+      },
+      "ubuntu-22.04-4core": {
+        "label": "ubuntu-22.04-4core",
+        "provider": "github",
+        "os": "linux",
+        "arch": "x64",
+        "vcpu": 4,
+        "ramGiB": 16,
+        "billingPerMinuteUsd": 0.016
+      }
+    }
+  },
+  "profiles": {
+    "cold": {
+      "name": "cold",
+      "actionsCache": "cold",
+      "crossRunArtifacts": "none",
+      "restoreExpectations": {},
+      "testResultReuseAllowed": false
+    },
+    "warm": {
+      "name": "warm",
+      "actionsCache": "warm",
+      "crossRunArtifacts": "seeded",
+      "seedScenario": "seed-parent",
+      "restoreExpectations": {},
+      "testResultReuseAllowed": true,
+      "amortizationHorizonRuns": 10
+    }
+  },
+  "adaptations": [
+    {
+      "id": "no-registry-login",
+      "kind": "workflow-setting",
+      "workflowFile": ".github/workflows/ci.yml",
+      "jobId": "build",
+      "fromPattern": "",
+      "toReplacement": "",
+      "expectedMatches": 0,
+      "setPath": [
+        "steps",
+        "2",
+        "if"
+      ],
+      "setValue": false,
+      "reason": "ci.yml job build: docker/login-action has no if: and no Docker Hub secrets exist here; the login only serves the push. Off in every configuration (kit.md design item 1; the setup commit makes the same edit on starsling/develop) (step index +1: instrumentation inserts the harness step at index 0 before adaptations apply)",
+      "blocksFullParity": true
+    },
+    {
+      "id": "no-image-push",
+      "kind": "workflow-setting",
+      "workflowFile": ".github/workflows/ci.yml",
+      "jobId": "build",
+      "fromPattern": "",
+      "toReplacement": "",
+      "expectedMatches": 0,
+      "setPath": [
+        "steps",
+        "5",
+        "with",
+        "push"
+      ],
+      "setValue": false,
+      "reason": "ci.yml job build: push: true would publish mirotalk/sfu:latest; set to false in every configuration, the two-platform build still runs (kit.md design item 2) (step index +1: instrumentation inserts the harness step at index 0 before adaptations apply)",
+      "blocksFullParity": true
+    },
+    {
+      "id": "secret-gate-dockerhub-username",
+      "kind": "secret-gate-annotation",
+      "workflowFile": ".github/workflows/ci.yml",
+      "jobId": "build",
+      "fromPattern": "${{ secrets.DOCKERHUB_USERNAME }}",
+      "toReplacement": "",
+      "expectedMatches": 1,
+      "reason": "DOCKERHUB_USERNAME does not exist in the benchmark org; only the login step reads it, and no-registry-login turns that step off. The reference is removed so no configuration reads it.",
+      "blocksFullParity": false
+    },
+    {
+      "id": "secret-gate-dockerhub-access-token",
+      "kind": "secret-gate-annotation",
+      "workflowFile": ".github/workflows/ci.yml",
+      "jobId": "build",
+      "fromPattern": "${{ secrets.DOCKERHUB_ACCESS_TOKEN }}",
+      "toReplacement": "",
+      "expectedMatches": 1,
+      "reason": "DOCKERHUB_ACCESS_TOKEN does not exist in the benchmark org; only the login step reads it, and no-registry-login turns that step off. The reference is removed so no configuration reads it.",
+      "blocksFullParity": false
+    }
+  ],
+  "collectors": [],
+  "execution": {
+    "repetitions": 5,
+    "timeoutMinutes": 150,
+    "maxConcurrentExperiments": 1,
+    "pollIntervalSeconds": 15,
+    "apiBudgetPerHour": 252,
+    "maxJobQueueSeconds": 30,
+    "publicRepoGitHubFree": true,
+    "commitIdentity": {
+      "name": "starsling-dev",
+      "email": "290538643+starsling-dev@users.noreply.github.com"
+    }
+  },
+  "instrumentation": true
+}

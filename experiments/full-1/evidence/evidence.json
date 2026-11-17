@@ -1,0 +1,6310 @@
+[
+  {
+    "sampleId": "full-1-main-push-cold-rep1-starsling-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43813753777
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep1-starsling-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep1-starsling-baseline/cache.json",
+        "sha256": "770f40b2482eb3567c3dd57e48e4b1b2b884fc540f36123924a51cbec80482ba",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep1-starsling-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep1-starsling-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 42,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1732
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep1-github-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43818251863
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep1-github-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep1-github-baseline/cache.json",
+        "sha256": "c3b3fcbdf79e59aa278fa96965ad50219d6604474f5d4847fc29d9d0a308c664",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep1-github-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep1-github-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 44,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 5810
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep1-starsling-patched",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43831469879
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep1-starsling-patched/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep1-starsling-patched/cache.json",
+        "sha256": "80ec56b75863a344958071c3ff4e4985277dde9429489a3d3f45779af9a39d77",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep1-starsling-patched/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm mkdir /tmp/mediasoup && cd /tmp/mediasoup && npm install --no-save \"mediasoup@$(cat /tmp/mediasoup-version)\" && test -x node_modules/mediasoup/worker/out/Release/mediasoup-worker",
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep1-starsling-patched",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 49,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1621
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep2-starsling-patched",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43837085406
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep2-starsling-patched/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep2-starsling-patched/cache.json",
+        "sha256": "fa2a87f6152924ce67ff83c0f85e21960eae541f06a2bdc12e39d909d5b9a616",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep2-starsling-patched/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm mkdir /tmp/mediasoup && cd /tmp/mediasoup && npm install --no-save \"mediasoup@$(cat /tmp/mediasoup-version)\" && test -x node_modules/mediasoup/worker/out/Release/mediasoup-worker",
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep2-starsling-patched",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 51,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1575
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep2-starsling-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43843133603
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep2-starsling-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep2-starsling-baseline/cache.json",
+        "sha256": "045279cc3260cd0646cba14b00471435e48a36dc9f273d6602cb5df2a22fd92e",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep2-starsling-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep2-starsling-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 41,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1683
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep2-github-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43904144947
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep2-github-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep2-github-baseline/cache.json",
+        "sha256": "c5434c225f88aa528b23ecaaa70d90f24fae7bbc3404bdeed4311c011f9bf86d",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep2-github-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep2-github-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 43,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 4480
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep3-starsling-patched",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43919934453
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep3-starsling-patched/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep3-starsling-patched/cache.json",
+        "sha256": "fa2a87f6152924ce67ff83c0f85e21960eae541f06a2bdc12e39d909d5b9a616",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep3-starsling-patched/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm mkdir /tmp/mediasoup && cd /tmp/mediasoup && npm install --no-save \"mediasoup@$(cat /tmp/mediasoup-version)\" && test -x node_modules/mediasoup/worker/out/Release/mediasoup-worker",
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep3-starsling-patched",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 51,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1637
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep3-github-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43926938353
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep3-github-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep3-github-baseline/cache.json",
+        "sha256": "334351732955427ff57a4c956b29560d6b46ce039a9c293281eff63e7c9b9318",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep3-github-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep3-github-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 45,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 6092
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep3-starsling-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43946669661
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep3-starsling-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep3-starsling-baseline/cache.json",
+        "sha256": "1974a91164cb6e4494def5ed4fe5401e82054739a0c1bb8830f12ae55ee78e7c",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep3-starsling-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep3-starsling-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 38,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1620
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep4-github-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43953226053
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep4-github-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep4-github-baseline/cache.json",
+        "sha256": "c5434c225f88aa528b23ecaaa70d90f24fae7bbc3404bdeed4311c011f9bf86d",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep4-github-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "ubuntu-22.04-4core",
+              "starsling": "ubuntu-22.04-4core",
+              "retainedOnGitHub": true,
+              "kind": "unmapped"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep4-github-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 43,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 6968
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep4-starsling-patched",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43974645858
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep4-starsling-patched/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep4-starsling-patched/cache.json",
+        "sha256": "fa2a87f6152924ce67ff83c0f85e21960eae541f06a2bdc12e39d909d5b9a616",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep4-starsling-patched/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm mkdir /tmp/mediasoup && cd /tmp/mediasoup && npm install --no-save \"mediasoup@$(cat /tmp/mediasoup-version)\" && test -x node_modules/mediasoup/worker/out/Release/mediasoup-worker",
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep4-starsling-patched",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 51,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1660
+    }
+  },
+  {
+    "sampleId": "full-1-main-push-cold-rep4-starsling-baseline",
+    "inputFingerprint": "57a0665dd114886f1b2f5297592c936d4ab94fbd6870b38f8eee929c180965ef",
+    "runIds": [
+      43980971901
+    ],
+    "sources": [
+      {
+        "path": "full-1-main-push-cold-rep4-starsling-baseline/tests.json",
+        "sha256": "eea83ec2c3a23b707df3b9fcf1f64fdabdf09c9074a1a480d1ffffd164ce1a6b",
+        "kind": "tests",
+        "format": "json-verdicts"
+      },
+      {
+        "path": "full-1-main-push-cold-rep4-starsling-baseline/cache.json",
+        "sha256": "c967bbc2c1a13d1e168273672310854df94316e7c4c52f4d932612cbef5ecb4b",
+        "kind": "cache"
+      },
+      {
+        "path": "full-1-main-push-cold-rep4-starsling-baseline/coverage.json",
+        "sha256": "be418bda85a642da91f25482b18fa99d7b669b0375bb8b62900e0a8a2611b210",
+        "kind": "coverage",
+        "format": "units"
+      }
+    ],
+    "execution": {
+      "inventory": {
+        "scenarioName": "main-push",
+        "triggeredWorkflows": [
+          ".github/workflows/ci.yml"
+        ],
+        "excludedWorkflows": [],
+        "downstreamWorkflowRuns": [],
+        "jobExpectations": [
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "test",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          },
+          {
+            "workflowFile": ".github/workflows/ci.yml",
+            "workflowName": "CI/CD",
+            "jobId": "build",
+            "triggeredBy": "direct",
+            "expectedStatus": "executed",
+            "isDynamicMatrix": false,
+            "mappedRunsOn": {
+              "github": "starsling-ubuntu-24.04",
+              "starsling": "starsling-ubuntu-24.04",
+              "retainedOnGitHub": true,
+              "kind": "unmapped",
+              "retentionReason": "Unmapped runner \"starsling-ubuntu-24.04\" retained on original label"
+            }
+          }
+        ],
+        "mixedRunnerOnStarSling": false,
+        "movedJobs": [],
+        "retainedJobs": [
+          ".github/workflows/ci.yml#test",
+          ".github/workflows/ci.yml#build"
+        ],
+        "blockers": [],
+        "nativeConditions": []
+      },
+      "semanticObligationsFulfilled": [
+        "release-image:linux/amd64",
+        "release-image:linux/arm64",
+        "unit-tests"
+      ],
+      "executedWorkflows": [
+        ".github/workflows/ci.yml"
+      ],
+      "executedMatrixRowCounts": {
+        ".github/workflows/ci.yml#test": 1,
+        ".github/workflows/ci.yml#build": 1
+      },
+      "observedCommands": [
+        "RUN --mount=type=cache,target=/root/.npm npm ci --omit=dev",
+        "npm ci",
+        "npm test"
+      ],
+      "jobOutputs": {},
+      "tests": [
+        {
+          "testId": "image:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "image:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mediasoup-worker:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:busy or broken default media devices",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:chat translation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Direct join authorization with OIDC",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dropdown hover open/close (#282)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:dynamic dropdown key extraction",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GET /createRoomToken",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:GifSearch (KLIPY chat picker)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:integration redirects",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:isJoinTokenAuthorized",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:JwtSecret",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Landing brand visibility",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher link configuration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:MiroTalk app switcher visibility config",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:mobile wake-lock lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:native translation catalogs",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:prejoin mobile audio guidance",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:PresenterManager",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:recording finalization before room exit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote audio autoplay unlock (Safari autoplay policy)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:remote control request confirmation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RemoteControlSetup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise processor startup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet readiness",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RNNoise worklet with the real wasm binary",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room background (browser-only)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Room creation authorization (Socket.IO createRoom)",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient RNNoise lifecycle",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:RoomClient video effects integration",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation downloads and diamonds",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen annotation text toolbar",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share camera layout",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:screen share on mobile",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server diamond annotation relay",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:server screen text style validation",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Server-side media moderator policies",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone dialer UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:SIP phone target parsing",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO breakout room authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO cmd sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO collaborative editor authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO file transfer sender identity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO join authorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Socket.IO updatePeerInfo security",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-DataChannelChatIdentity",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-FfmpegProcess",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ForcedExit",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-HostUsers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Lobby",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-LobbyAuthorization",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-OpenRedirect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Reconnect virtual background restore",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomPassword",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RoomTemplates",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-RtmpQuality",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Seo",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-ServerAPI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-TransportRecovery",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Validator",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whip",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-Whisper",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:test-XSS",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:total",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Video effects engine",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background canvas fallback",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background pipeline cleanup",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Virtual background settings selection",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:Visual effects panel",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client helpers",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "mocha:WHIP client UI",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/amd64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:linux/arm64",
+          "verdict": "passed",
+          "mode": "executed"
+        },
+        {
+          "testId": "npm-ci:test-job",
+          "verdict": "passed",
+          "mode": "executed"
+        }
+      ],
+      "coverage": {
+        "lines": {
+          "covered": 78,
+          "total": 78,
+          "percentage": 100
+        },
+        "scopeHash": "78ad974178b75b9cba1a41e34da8742c1259cc2f7362f7c2f319f0f694726f24"
+      }
+    },
+    "cache": {
+      "sampleId": "full-1-main-push-cold-rep4-starsling-baseline",
+      "profile": {
+        "name": "cold",
+        "actionsCache": "cold",
+        "crossRunArtifacts": "none",
+        "restoreExpectations": {},
+        "testResultReuseAllowed": false
+      },
+      "expectedSourceSha": "e76e48f678f286fd5597617ea040c626d2d191db",
+      "consumerRef": "refs/heads/main",
+      "defaultBranch": "showcase",
+      "cacheEvents": [
+        {
+          "cacheKey": "buildkit-gha",
+          "requestedRestoreKeys": [],
+          "matchedKey": null,
+          "hitKind": "miss",
+          "sourceRef": "unknown",
+          "buildkit": {
+            "done": 40,
+            "cached": 0,
+            "error": 0,
+            "imported": true,
+            "exported": true
+          }
+        }
+      ],
+      "inventoryVerified": true,
+      "coldSeedTotalSeconds": 0,
+      "warmSampleTotalSeconds": 1762
+    }
+  }
+]

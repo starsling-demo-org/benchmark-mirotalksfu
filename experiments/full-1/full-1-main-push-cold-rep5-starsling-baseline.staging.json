@@ -1,0 +1,34 @@
+{
+  "experimentId": "full-1",
+  "sampleId": "full-1-main-push-cold-rep5-starsling-baseline",
+  "scenarioName": "main-push",
+  "variant": "starsling-baseline",
+  "profileName": "cold",
+  "currentStep": "recovered",
+  "completedSteps": [
+    "1_acquire_lease",
+    "2_register_placeholders"
+  ],
+  "controlBranch": "bench/control",
+  "defaultBranch": "showcase",
+  "benchmarkOwnedRefs": [
+    "refs/heads/main",
+    "refs/heads/showcase",
+    "refs/heads/bench/pr/main-push/head"
+  ],
+  "previousBenchmarkRefs": {
+    "refs/heads/main": "aef86c66684bbf8c7039b979079b3c3985fa8e34",
+    "refs/heads/showcase": "f9b8a29fdea36cf52bbb58bf4b9b6d6d462f7b09",
+    "refs/heads/bench/pr/main-push/head": null
+  },
+  "observedUnrelatedRefs": {
+    "refs/heads/bench/control": "1413494822935b0011fd6fff78cce9ba58a9fb46",
+    "refs/heads/starsling/develop": "7f1fc56c1543dfea7be4563c0dc0e4d30ac0a8f5"
+  },
+  "registeredPlaceholderWorkflows": [],
+  "disabledWorkflows": [],
+  "enabledWorkflows": [],
+  "updatedAt": "2026-11-17T01:38:52.297Z",
+  "leaseAcquiredAt": "2026-11-17T00:10:03.935Z",
+  "leaseHolder": "full-1:full-1-main-push-cold-rep5-starsling-baseline"
+}
