@@ -137,7 +137,7 @@ Each cell is the whole wait for that merge and links to its run.
 6. **Check.** Replays are compared job by job with upstream's own runs for the same commit, and every sample's test verdicts, coverage and cache restores are read from its own job logs.
 
 - **Control configuration.** Each round also replayed the event on StarSling runners with the CI unchanged, as an internal control. It is not part of this comparison, and its samples are not shown in the tables on this page; they are in the data files under `benchmark/`.
-- **Default branch.** The default branch is `main`.
+- **Default branch.** Upstream's default branch is `main`.
 - **Lane: merges to the default branch.** This page measures merges to mirotalksfu's default branch. Each sample replays the merge of `e76e48f6`. PR updates were not measured: upstream's only workflow runs on merges to the default branch and has no pull-request trigger.
 - **Workflows in this merge.** The replayed merge runs upstream's only workflow, `ci.yml`: the tests, then one `build` job that builds the image for both CPU types under emulation (QEMU) in a single job.
 - **One repository per lane.** Most samples ran concurrently, each in its own repository (one separate copy of this repository per lane, six in all, with the same branches, events and payloads as this repository), so their caches never mix; a cold sample ran with no caches in its repository. 8 of the 20 samples on this page (cold rounds 1 to 4, both configurations) came from an earlier sequential run of the same configuration in this repository, one sample at a time; the other 12 came from the lanes. Those copies are not public, so samples that ran in them appear in the sample table without a run link.
